@@ -22,11 +22,11 @@ const ListItem = ({ item }) => {
                 {/* Content */}
                 <View style={styles.contentView}>
                     <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-                        <Text style={[styles.baseText, styles.nameText]}> {item.name} <Text style={styles.usernameText}>@{item.username} * 1dk</Text> </Text>
+                        <Text style={[styles.baseText, styles.nameText]}>{item.name}<Text style={styles.usernameText}>@{item.username} * 1dk</Text> </Text>
 
                         <IconEntypo name="dots-three-horizontal" size={20} color="#AAB8C2" />
                     </View>
-                    <Text style={[styles.descTex, styles.baseText]}> {item.description} </Text>
+                    <Text style={[styles.descTex, styles.baseText]}>{item.description}</Text>
                     <Image
                         style={styles.postImg}
                         source={{
@@ -37,7 +37,7 @@ const ListItem = ({ item }) => {
                     <View style={styles.iconView}>
                         <Icon name="comment-o" size={20} color="#AAB8C2" />
                         <Icon name="retweet" size={20} color="#AAB8C2" />
-                        <Icon name="heart-o" size={20} color="#AAB8C2"> <Text style = {styles.IconLikeCountText} >2</Text> </Icon>
+                        <Icon name="heart-o" size={20} color="#AAB8C2"> <Text style = {styles.IconLikeCountText} >{item.likeCount}</Text> </Icon>
                         <IconIonic name="share-outline" size={20} color="#AAB8C2" style={{ marginRight: 30 }} />
 
                     </View>
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 100 / 2,
+        marginRight:3,
     },
 
     baseText: {
